@@ -2340,9 +2340,9 @@ var PanelFooter = function (_a) {
 			React.createElement(SocialEntry, null,
             cakePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
                 React.createElement(Icon$v, { width: "24px", mr: "8px" }),
-                React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 })),
-				React.createElement(Dropdown, { position: "top-right", target: React.createElement(Button, { variant: "text", startIcon: React.createElement(LanguageIcon, { color: "textSubtle", width: "24px" }) },
-                    React.createElement(Text, { color: "textSubtle" }, currentLang === null || currentLang === void 0 ? void 0 : currentLang.toUpperCase())) }, langs.map(function (lang) { return (React.createElement(MenuButton, { key: lang.code, fullWidth: true, onClick: function () { return setLang(lang); }, 
+                React.createElement(Text, { color: "iconcolor", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 })),
+				React.createElement(Dropdown, { position: "top-right", target: React.createElement(Button, { variant: "text", startIcon: React.createElement(LanguageIcon, { color: "iconcolor", width: "24px" }) },
+                    React.createElement(Text, { color: "iconcolor" }, currentLang === null || currentLang === void 0 ? void 0 : currentLang.toUpperCase())) }, langs.map(function (lang) { return (React.createElement(MenuButton, { key: lang.code, fullWidth: true, onClick: function () { return setLang(lang); }, 
                 // Safari fix
                 style: { minHeight: "32px", height: "auto" } }, lang.language)); }))
 				
@@ -2351,7 +2351,7 @@ var PanelFooter = function (_a) {
         React.createElement(SettingsEntry, null,
 			 React.createElement(Flex, null, socials.map(function (social, index) {
                 var Icon = Icons$1[social.icon];
-                var iconProps = { width: "20px", color: "textSubtle", style: { cursor: "pointer", marginLeft:"13px" } };
+                var iconProps = { width: "20px", color: "iconcolor", style: { cursor: "pointer", marginLeft:"13px" } };
                 var mr = index < socials.length - 1 ? "20px" : 0;
                 if (social.items) {
                     return (React.createElement(Dropdown, { key: social.label, position: "top", target: React.createElement(Icon, __assign({}, iconProps, { mr: mr })) }, social.items.map(function (item) { return (React.createElement(Link, { external: true, key: item.label, href: item.href, "aria-label": item.label, color: "textSubtle" }, item.label)); })));
@@ -2808,11 +2808,11 @@ var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { ba
     } });
 	*/
 	
-var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#FFFFFF", background: "#112436", backgroundDisabled: "#1F2C3C", contrast: "#009eff", invertedContrast: "#191326", input: "#483f5a", primaryDark: "#0098A1", tertiary: "#3B475B", text: "#FFFFFF", textDisabled: "#72808E", textSubtle: "#A4C5E1", borderColor: "#524B63", card: "#081D2D", gradients: {
+var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#FFFFFF", background: "#112436", backgroundDisabled: "#1F2C3C", contrast: "#009eff", invertedContrast: "#191326", input: "#483f5a", primaryDark: "#0098A1", tertiary: "#3B475B", text: "#FFFFFF", textDisabled: "#72808E", textSubtle: "#FFFFFF", iconcolor: "#A4C5E1", borderColor: "#524B63", card: "#081D2D", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
     } });	
 	
-var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#FFFFFF", background: "#112436", backgroundDisabled: "#1F2C3C", contrast: "#009eff", invertedContrast: "#191326", input: "#483f5a", primaryDark: "#0098A1", tertiary: "#3B475B", text: "#FFFFFF", textDisabled: "#72808E", textSubtle: "#A4C5E1", borderColor: "#524B63", card: "#081D2D", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#FFFFFF", background: "#112436", backgroundDisabled: "#1F2C3C", contrast: "#009eff", invertedContrast: "#191326", input: "#483f5a", primaryDark: "#0098A1", tertiary: "#3B475B", text: "#FFFFFF", textDisabled: "#72808E" , textSubtle: "#FFFFFF", iconcolor: "#A4C5E1", borderColor: "#524B63", card: "#081D2D", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
     } });
 
