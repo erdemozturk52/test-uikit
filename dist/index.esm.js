@@ -2187,7 +2187,7 @@ var socials = [
                 href: "http://t.me/ybearfinance_India",
             },
 			{
-                label: "Channel",
+                label: "Announcements",
                 href: "https://t.me/ybearchannel",
             },
 			
@@ -2592,6 +2592,13 @@ var UserBlock = function (_a) {
         } }, "Connect"))));
 };
 
+var BuySbear = function (_a) {
+   
+    return (React.createElement(Button, { size: "sm",marginRight:"10px", onClick: function () {
+             window.location.href = "https://v2exchange.ybearswap.finance/#/swap?outputCurrency=0xdEC858d5ee93568CE4eA5bbf9169ceA23d2dE305";
+        } }, "Buy SBEAR"));
+};
+
 var Icon$19 = function (props) {
     var theme = useTheme();
     var primaryColor = theme.isDark ? "#3C3742" : "#e9eaeb";
@@ -2695,6 +2702,7 @@ var Menu = function (_a) {
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React.createElement(Flex, null,
+				React.createElement(BuySbear, { account: account, login: login, logout: logout }),
                 React.createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React.createElement(Avatar, { profile: profile }))),
         React.createElement(BodyWrapper, null,
